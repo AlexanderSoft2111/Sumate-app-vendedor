@@ -1,0 +1,43 @@
+.login{
+    --background: #ffffff;
+    border-radius: 15px;
+}
+.login_interno{
+    border-radius: 15px;
+    background: rgb(252,252,250);
+    background: radial-gradient(circle, rgba(252,252,250,1) 40%, rgba(17,215,189,1) 87%);
+    padding: 15px;
+}
+
+.navegacion{
+    margin-bottom: 10px;
+    --background: #042121;
+    color: white;
+    border-radius: 5px;
+}
+
+.items{
+    --background: #169685;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #fcfcfa;
+    height: 45px;
+    
+}
+.boton{
+    --background: #021e22;
+    color: #fcfcfa;
+    height: 50px;
+    --border-style: none;
+}
+.cancelar{
+    --background: #fcfcfa;
+    color: #021e22;
+}
+
+.imagen-producto{
+    padding: 10px;
+    border: 1px solid #fcfcfa;;
+    border-radius: 20px;
+    margin: auto;
+}

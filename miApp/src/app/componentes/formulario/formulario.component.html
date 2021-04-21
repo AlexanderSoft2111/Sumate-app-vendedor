@@ -1,0 +1,84 @@
+<ion-content>
+    <ion-card>
+        <ion-row>
+            <ion-col>
+                <ion-item *ngFor="let producto of productos">
+                    <ion-label class="subtitulo"> {{producto.descripcion}}</ion-label>
+                    <ion-buttons>
+                        <ion-button slot="end" (click)="newPro = producto; enableNewProduct = true">
+                            <ion-icon name="create"></ion-icon>
+                        </ion-button>
+                        <ion-button slot="end" (click)="deleteProdcut(producto); enableNewProduct = false">
+                            <ion-icon slot="icon-only" name="trash"></ion-icon>
+                        </ion-button>
+                    </ion-buttons>
+                    <video>{{producto}}</video>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+    </ion-card>
+    <ion-item>
+        <ion-buttons slot="end">
+            <ion-button expand="block" fill="outline" (click)="new()">
+                <ion-icon name="add-circle-sharp"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-item>
+    <ion-card class="login" *ngIf="enableNewProduct">
+        <ion-grid>
+            <ion-row class="ion-justify-content-center">
+                <ion-col size="12">
+                    <ion-card class="login_interno">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col>
+                                    <ion-item class="navegacion">
+                                        <ion-buttons slot="end">
+                                            <ion-button (click)="addProduct(); enableNewProduct = false">
+                                                <ion-icon name="save-sharp" slot="icon-only"></ion-icon>
+                                            </ion-button>
+                                            <ion-button (click)="enableNewProduct = false">
+                                                <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+                                            </ion-button>
+                                        </ion-buttons>
+                                    </ion-item>
+                                    <ion-item class="items">
+                                        <ion-label class="subtitulo">Código:</ion-label>
+                                        <ion-input [(ngModel)]="newPro.codigo" type="text"></ion-input>
+                                    </ion-item>
+                                    <ion-item class="items">
+                                        <ion-label class="subtitulo">Descripción:</ion-label>
+                                        <ion-input [(ngModel)]="newPro.descripcion" type="text"></ion-input>
+                                    </ion-item>
+                                    <ion-item class="items">
+                                        <ion-label class="subtitulo">Precio:</ion-label>
+                                        <ion-input [(ngModel)]="newPro.precio" type="number"></ion-input>
+                                    </ion-item>
+                                    <ion-item class="items">
+                                        <ion-label class="subtitulo">Cantidad:</ion-label>
+                                        <ion-input [(ngModel)]="newPro.cantidadDisponible" type="number"></ion-input>
+                                    </ion-item>
+                                    <ion-item class="items">
+                                        <ion-label class="subtitulo">Foto:</ion-label>
+                                        <ion-buttons>
+                                            <ion-button slot="end">
+                                                <label for="file-upload">
+                                                    <ion-icon slot="icon-only" name="images"></ion-icon>
+                                                </label>
+                                                <input (change)="newImagenUpload($event)" id="file-upload" style="display: none;" type="file">
+                                                <canvas id="canvas" style="display: none;"></canvas>
+                                            </ion-button>
+                                        </ion-buttons>
+                                    </ion-item>
+                                    <ion-item>
+                                        <img class="imagen-producto" [src]="newPro.imagen" alt="fondo-producto">
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-card>
+</ion-content>

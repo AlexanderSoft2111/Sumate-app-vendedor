@@ -1,0 +1,79 @@
+.login {
+    --background: #ffffff;
+    border-radius: 15px;
+}
+
+.login_interno {
+    border-radius: 15px;
+    background: rgb(252, 252, 250);
+    background: radial-gradient(circle, rgba(252, 252, 250, 1) 40%, rgba(17, 215, 189, 1) 87%);
+    padding: 15px;
+}
+
+.navegacion {
+    margin-bottom: 10px;
+    --background: #042121;
+    color: white;
+    border-radius: 5px;
+}
+
+.items {
+    --background: #169685;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #fcfcfa;
+    height: 45px;
+}
+
+.boton {
+    --background: #021e22;
+    color: #fcfcfa;
+    height: 50px;
+    --border-style: none;
+}
+
+.cancelar {
+    --background: #fcfcfa;
+    color: #021e22;
+}
+
+.img-cliente {
+    border-radius: 50%;
+    background: gray;
+    width: 90%;
+    height: 90%;
+}
+
+.fila {
+    margin-top: 9px;
+}
+
+.col-subrayada {
+    border-bottom: 1px solid #494848;
+    padding: 0px;
+}
+
+.iconos {
+    font-size: 28px;
+    color: #494848;
+}
+
+.flexible {
+    display: flex;
+}
+
+.boton-cargar {
+    color: #87c93d;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.principal {
+    margin-top: 1%;
+}
+
+.color-whatsapp {
+    color: #2F6D69;
+}

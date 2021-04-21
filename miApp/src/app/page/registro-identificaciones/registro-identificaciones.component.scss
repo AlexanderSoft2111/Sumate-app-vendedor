@@ -1,0 +1,95 @@
+//Estilos para el formulario de los inputs de registro
+.container-form {
+    border-radius: 0 0 20px 20px;
+    z-index: 1;
+    background: white;
+    height: 65%;
+    color: #494848;
+    @media screen and (orientation: landscape) {
+        height: auto;
+    }
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    margin-right: 32px;
+    margin-left: 16px;
+}
+
+.input-registro {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left: 12px;
+    --placeholder-color: #494848;
+    --placeholder-opacity: none;
+}
+
+.direccion {
+    margin-right: 16px;
+}
+
+.icon-registro {
+    width: 26px;
+    height: 26px;
+    color: #494848;
+}
+
+//Estilos para los iconos de direccion sobrepuestos en los input 
+.boton-flotante {
+    color: #c80303;
+    font-size: 30px;
+}
+
+//estilos del contenedor de los radio buttons 
+.radio-buttons {
+    position: relative;
+    top: -20px;
+    z-index: -1;
+    //   height: 40vh;
+}
+
+.lista-radio {
+    margin-top: 20px;
+}
+
+.radio {
+    background: #87c93d;
+}
+
+.text-radio {
+    --color: #fcfcfa;
+    --color-checked: #E7FCFB;
+    color: #fcfcfa;
+}
+
+.item-radio {
+    //   --background: rgb(4, 128, 116, );
+    // --border-style: none;
+    --border-color: none;
+    // --color: #fcfcfa;
+}
+
+//Estilos para los botones del pie de pagina
+.columna-botones-registro {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.boton {
+    width: 110px;
+    height: 35px;
+    border-radius: 8px;
+    background: #e1ead1;
+    color: #87c93d;
+}
+
+.guardar {
+    color: #e1ead1;
+    background: #1c5e1c;
+    margin-left: 16px;
+}

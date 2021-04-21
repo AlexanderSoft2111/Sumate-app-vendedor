@@ -1,0 +1,50 @@
+//Estilos del contenedor de la lista
+.container {
+    padding: 16px;
+    padding-top: 10px;
+}
+
+//Estilo del boton añadir 
+.boton-añadir {
+    --background: rgb(29, 100, 92);
+    --background: linear-gradient(180deg, rgba(29, 100, 92, 1) 20%, rgba(4, 128, 116, 1) 100%);
+    --color: #E7FCFB;
+}
+
+//Estilos de la fila de la lista
+.fila {
+    margin-top: 9px;
+}
+
+//Estilos de la columna y de los iconos para que esten centrados
+.col-subrayada {
+    border-bottom: 1px solid #494848;
+}
+
+.flexible {
+    display: flex;
+    justify-content: flex-end;
+}
+
+// boton cargar mas
+.boton-cargar {
+    color: #87c93d;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.titulo {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    color: #494848 !important;
+}
+
+.subtitulo {
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #494848 !important;
+}

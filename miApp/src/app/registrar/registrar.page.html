@@ -1,0 +1,106 @@
+<!-- 
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title>Bienvenidos</ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/carrito">
+        <ion-icon name="cart"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+          <ion-grid class="container-form">
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="card" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.cedula" type="tel" placeholder="Cédula"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="person" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.nombre" type="text" placeholder="Nombres"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="accessibility" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.apellido" type="text" placeholder="Apellidos"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="mail" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.email" type="mail" placeholder="Correo"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="lock-closed" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.contrasena" type="text" placeholder="Contraseña"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="lock-closed" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="confcontrasena" type="text" placeholder="Confirmar Contraseña"></ion-input>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="trail-sign" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="user.direccion" type="tel" placeholder="Dirección"></ion-input>
+                <ion-icon class="icon-flotante" name="ellipsis-horizontal"></ion-icon>
+              </ion-col>
+            </ion-row>
+            <ion-row class="fila">
+              <ion-col size="1">
+                <ion-icon name="phone-portrait" class="icon-registro"></ion-icon>
+              </ion-col>
+              <ion-col size="7">
+                <ion-input class="input-registro" [(ngModel)]="user.telefono" type="tel" placeholder="Teléfono"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>     
+          <ion-card class="login_interno">
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-button [disabled]="registrando" class="boton" 
+                  expand="block" fill="outline" (click)="addUser()">Registrarse</ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-button routerLink="/login" class="boton cancelar" 
+                  expand="block" fill="outline">Cancelar</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+  <ion-spinner *ngIf="registrando" name="circles"></ion-spinner>
+</ion-content> -->

@@ -1,0 +1,27 @@
+<ion-content>
+
+    <ion-list *ngFor="let cliente of clientes">
+        <ion-item>
+            <ion-thumbnail slot="start">
+                <ion-img class="img-cliente" [src]="cliente.imagenSmall"></ion-img>
+            </ion-thumbnail>
+            <ion-label>
+                <h2 class="titulo">{{cliente.nombre}} {{cliente.apellido}}</h2>
+                <h3 class="subtitulo">{{cliente.direccion}}</h3>
+                <p class="subtitulo">{{cliente.telefono}}</p>
+            </ion-label>
+            <ion-buttons>
+                <ion-button slot="end" (click)="presentActionSheet(cliente)">
+                    <ion-icon name="ellipsis-vertical"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+        </ion-item>
+    </ion-list>
+
+    <ion-label class="subtitulo boton-cargar" (click)="cargarMas()">Ver más</ion-label>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="vaciarClientes()">
+        <ion-fab-button color="sudamate" routerLink="/set-clientes">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

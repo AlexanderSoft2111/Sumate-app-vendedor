@@ -1,0 +1,67 @@
+// .login{
+//     --background: #d3e4e2;
+//     border-radius: 15px;
+// }
+// .login_interno{
+//     border-radius: 15px;
+//     background: rgb(22,150,133);
+//     background: linear-gradient(320deg, rgba(22,150,133,1) 0%, rgba(252,252,250,1) 67%);
+//     padding: 15px;
+// }
+// .items{
+//     --background: #169685;
+//     border-radius: 10px;
+//     margin-bottom: 10px;
+//     color: #fcfcfa;
+//     height: 45px;
+    
+// }
+// .boton{
+//     --background: #021e22;
+//     color: #fcfcfa;
+//     height: 50px;
+//     --border-style: none;
+// }
+// .cancelar{
+//     --background: #fcfcfa;
+//     color: #021e22;
+// }
+.container-form{
+    border-radius: 0 0 20px 20px;
+}  
+
+
+.fila{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+}
+
+
+
+.icon-registro{
+    width: 26px;
+    height: 26px;
+    color: #494848;
+}
+
+.input-registro{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left: 12px;
+    --placeholder-color: #494848;
+    --placeholder-opacity: none;
+}
+
+.icon-flotante{
+    position: absolute;
+    left: 92%;
+    top: 50%;
+}
+.down{
+    position: absolute;
+    left: 80%;
+    top: 40%;
+}

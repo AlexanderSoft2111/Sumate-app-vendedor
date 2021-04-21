@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "miapp-90845": {
+      "hosting": {
+        "sumate": [
+          "sumate-smt"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "miapp-90845"
+  }
+}

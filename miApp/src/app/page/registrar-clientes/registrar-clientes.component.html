@@ -1,0 +1,109 @@
+<ion-header>
+    <app-header [titulo]="tituloRegistro"></app-header>
+</ion-header>
+<ion-content color="sudamate">
+    <ion-grid class="container-form">
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="card" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input maxlength="10" required class="input-registro" [(ngModel)]="newCliente.cedula" type="tel" placeholder="Cédula"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="person" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input required class="input-registro" [(ngModel)]="newCliente.nombre" type="text" placeholder="Nombres"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="accessibility" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.apellido" type="text" placeholder="Apellidos"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="mail" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" [(ngModel)]="newCliente.email" type="mail" placeholder="Correo" name="email"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila direccion">
+            <ion-col size="1">
+                <ion-icon name="trail-sign" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-buttons>
+                    <ion-input class="input-registro" [(ngModel)]="newCliente.direccion" type="text" placeholder="Dirección"></ion-input>
+                    <ion-button class="boton-flotante" slot="end" (click)="openModal()">
+                        <ion-icon slot="icon-only" name="location" color="danger"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="phone-portrait" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.telefono" type="tel" placeholder="Teléfono"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="1" class="columna-imagen">
+                <ion-buttons>
+                    <ion-button slot="end">
+                        <label for="file-upload" class="boton-imagen"> 
+                        <ion-icon class="icon-registro" slot="icon-only" name="image"></ion-icon>
+                      </label>
+                        <input (change)="newImagenUpload($event)" id="file-upload" style="display: none;" type="file" accept="image/*">
+                        <canvas id="canvas" style="display: none;"></canvas>
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+            <ion-col size="11" class="columna-imagen">
+                <img class="imagen-producto" [src]="newCliente.imagenBig" alt="imagen de perfil">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid class="radio-buttons" color="sudamate">
+        <ion-row>
+            <ion-col>
+                <ion-list class="radio">
+                    <ion-radio-group [value]="newCliente.rol" [(ngModel)]="newCliente.rol">
+                        <ion-list-header>
+                            <ion-label class="subtitulo text-radio">Categoria</ion-label>
+                        </ion-list-header>
+                        <ion-item class="item-radio">
+                            <ion-label class="subtitulo">Mayorista</ion-label>
+                            <ion-radio class="text-radio" slot="start" value="Mayorista"></ion-radio>
+                        </ion-item>
+                        <ion-item class="item-radio">
+                            <ion-label class="subtitulo">Minorista</ion-label>
+                            <ion-radio class="text-radio" slot="start" value="Minorista"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="columna-botones-registro">
+                <ion-buttons>
+                    <ion-button (click)="cancelar()" class="boton titulo">Cancelar</ion-button>
+                    <ion-button (click)="addCliente()" class="boton titulo guardar" *ngIf="!actualizar">Guardar</ion-button>
+                    <ion-button (click)="updateCliente()" class="boton titulo guardar" *ngIf="actualizar">Actualizar</ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer class="container-page">
+
+</ion-footer>

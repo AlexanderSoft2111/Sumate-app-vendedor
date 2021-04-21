@@ -1,0 +1,26 @@
+.fondo {
+    width: 100%;
+    height: 100%;
+    background-image: url(/assets/img/Portadaweb.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.background {
+    --background-color: #85FFBD;
+    --background: linear-gradient(45deg, #FFFB7D 0%, #85FFBD 100%);
+}
+
+.continue {
+    margin: 0;
+    margin-left: 20%;
+    position: relative;
+    top: 10%;
+    color: #09a327;
+}
+
+.contenedor {
+    position: relative;
+    top: 85%;
+    --background: none;
+}

@@ -1,0 +1,84 @@
+<ion-header>
+    <app-header [titulo]="tituloRegVisita"></app-header>
+</ion-header>
+<ion-content color="sudamate">
+    <ion-grid class="container-form" color="sudamate">
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="person" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.nombre" type="text" placeholder="Nombres"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="accessibility" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.apellido" type="text" placeholder="Apellidos"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="mail" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.email" type="mail" placeholder="Correo"></ion-input>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila direccion">
+            <ion-col size="1">
+                <ion-icon name="trail-sign" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-buttons>
+                    <ion-input class="input-registro" [(ngModel)]="newCliente.direccion" type="text" placeholder="Dirección"></ion-input>
+                    <ion-button class="boton-flotante" slot="end" (click)="openModal()">
+                        <ion-icon slot="icon-only" name="location"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+        <ion-row class="fila">
+            <ion-col size="1">
+                <ion-icon name="phone-portrait" class="icon-registro"></ion-icon>
+            </ion-col>
+            <ion-col size="11">
+                <ion-input class="input-registro" [(ngModel)]="newCliente.telefono" type="tel" placeholder="Teléfono"></ion-input>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid class="radio-buttons" color="sudamate">
+        <ion-row class="lista-radio" color="sudamate">
+            <ion-col color="sudamate">
+                <ion-list class="radio">
+                    <ion-radio-group [value]="newCliente.tipoVisita" [(ngModel)]="newCliente.tipoVisita" color="sudamate" class="item-radio">
+                        <ion-list-header color="sudamate">
+                            <ion-label class="subtitulo text-radio">Estado</ion-label>
+                        </ion-list-header>
+                        <ion-item lines="none" color="sudamate">
+                            <ion-label class="subtitulo">Visitado</ion-label>
+                            <ion-radio class="text-radio" slot="start" value="Visitado"></ion-radio>
+                        </ion-item>
+                        <ion-item lines="none" color="sudamate">
+                            <ion-label class="subtitulo">Volver a visitar</ion-label>
+                            <ion-radio class="text-radio" slot="start" value="Volver a visitar"></ion-radio>
+                        </ion-item>
+                    </ion-radio-group>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="columna-botones-registro">
+                <ion-buttons>
+                    <ion-button (click)="cancelar()" class="boton titulo">Cancelar</ion-button>
+                    <ion-button (click)="addCliente()" class="boton titulo guardar" *ngIf="!actualizar">Guardar</ion-button>
+                    <ion-button (click)="updateCliente()" class="boton titulo guardar" *ngIf="actualizar">Actualizar</ion-button>
+                </ion-buttons>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer class="container-page">
+</ion-footer>

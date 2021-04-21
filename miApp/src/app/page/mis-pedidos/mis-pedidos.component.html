@@ -1,0 +1,68 @@
+<ion-header>
+    <app-header></app-header>
+</ion-header>
+<ion-content>
+    <div class="m-3">
+        <ion-segment mode="ios" (ionChange)="changeSegment($event)">
+            <ion-segment-button value="Pendientes">
+                <ion-label>Nuevos</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="Entregados">
+                <ion-label>Entregados</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+    <div *ngIf="pedidoNuevo">
+        <ion-card *ngFor="let pedido of pedidos">
+            <ion-item>
+                <ion-label>
+                    <h1 class="titulo-pedido">
+                        Nombre: {{pedido.cliente.nombre}} {{pedido.cliente.apellido}}
+                    </h1>
+                    <h2 class="subtitulo-pedido">
+                        Estado: {{pedido.estado}}
+                    </h2>
+                    <p class="normal-pedido">
+                        Fecha solicitada: {{pedido.fecha.seconds*1000 | date}}
+                    </p>
+                    <p class="normal-pedido" *ngIf="pedido.fechaEnvio !== null">
+                        Fecha de Entrega: {{pedido.fechaEnvio.seconds*1000 | date}}
+                    </p>
+                </ion-label>
+            </ion-item>
+            <app-item-carrito *ngFor="let producto of pedido.productos" [productoPedido]="producto" [botones]=false>
+            </app-item-carrito>
+            <ion-item>
+                <ion-label class="total">Total</ion-label>
+                <ion-note class="total" slot="end">{{"$ "+pedido.precioTotal.toFixed(2)}}</ion-note>
+            </ion-item>
+        </ion-card>
+    </div>
+    <div *ngIf="!pedidoNuevo">
+        <ion-card *ngFor="let pedido of pedidosEntregados">
+            <ion-item>
+                <ion-label>
+                    <h1 class="titulo-pedido">
+                        Nombre: {{pedido.cliente.nombre}} {{pedido.cliente.apellido}}
+                    </h1>
+                    <h2 class="subtitulo-pedido">
+                        Estado: {{pedido.estado}}
+                    </h2>
+                    <p class="normal-pedido">
+                        Fecha solicitada: {{pedido.fecha.seconds*1000 | date}}
+                    </p>
+                    <p class="normal-pedido">
+                        Fecha de Entrega: {{pedido.fechaEnvio.seconds*1000 | date}}
+                    </p>
+                </ion-label>
+            </ion-item>
+            <app-item-carrito *ngFor="let producto of pedido.productos" [productoPedido]="producto" [botones]=false>
+            </app-item-carrito>
+            <ion-item>
+                <ion-label class="total">Total</ion-label>
+                <ion-note class="total" slot="end">{{"$ "+pedido.precioTotal.toFixed(2)}}</ion-note>
+            </ion-item>
+        </ion-card>
+    </div>
+    <ion-label class="normal boton-cargar" (click)="cargarmas()">Ver más</ion-label>
+</ion-content>
